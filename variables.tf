@@ -17,7 +17,7 @@ EOT
     resource_group_name     = string
     table_names             = set(string)
     workspace_resource_id   = string
-    enabled                 = optional(bool, false)
+    enabled                 = optional(bool) # Default: false
   }))
 }
 
