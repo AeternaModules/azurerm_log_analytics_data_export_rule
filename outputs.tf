@@ -1,3 +1,7 @@
+output "log_analytics_data_export_rules_id" {
+  description = "Map of id values across all log_analytics_data_export_rules, keyed the same as var.log_analytics_data_export_rules"
+  value       = { for k, v in azurerm_log_analytics_data_export_rule.log_analytics_data_export_rules : k => v.id }
+}
 output "log_analytics_data_export_rules_destination_resource_id" {
   description = "Map of destination_resource_id values across all log_analytics_data_export_rules, keyed the same as var.log_analytics_data_export_rules"
   value       = { for k, v in azurerm_log_analytics_data_export_rule.log_analytics_data_export_rules : k => v.destination_resource_id }
