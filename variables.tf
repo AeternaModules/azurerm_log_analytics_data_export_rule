@@ -17,7 +17,7 @@ EOT
     resource_group_name     = string
     table_names             = set(string)
     workspace_resource_id   = string
-    enabled                 = optional(bool) # Default: false
+    enabled                 = optional(bool)
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_log_analytics_data_export_rule's provider source ---
   # Not auto-enabled: either a bespoke provider validator we can't safely translate,
